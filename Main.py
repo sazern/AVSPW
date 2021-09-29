@@ -99,7 +99,7 @@ def loadwallet():
     )
     console.print(table)
 
-    #print("Adress: ", adress, "Balance", balance / 10**18, " ICX",)
+   
     menu()
 
 def menu():
@@ -321,13 +321,11 @@ def queryiscore():
 
     menu()
 
-   # print(iscoreresult)
-    #print("estimatedICX: " + estimatedicx)
-    #print("Iscore: " + iscore)
+  
 
 def transfer():
-    # send_transaction.py
-# Load our existing wallet 1 
+  
+
     import time
     from rich.progress import track
     from rich.table import Table
@@ -339,14 +337,14 @@ def transfer():
     loops = amount * 10**18
     wallet = KeyWallet.load(name, pw)
 
-    # Build a transaction instance, hard-code it to send 1 ICX from wallet 1 to wallet 2
+  
     from iconsdk.builder.transaction_builder import (
     TransactionBuilder,
     DeployTransactionBuilder,
     CallTransactionBuilder,
     MessageTransactionBuilder
 )
-# Input reciever adress
+
 
     from iconsdk.signed_transaction import SignedTransaction
     transaction = TransactionBuilder()\
@@ -402,12 +400,6 @@ def transfer():
     ) 
     console.print(table)
     
-
-
-
-
-    #print("From: ", sender, "To: ", getter, "Value :", icx, "ICX", " ", "StepPrice: ", stepprice, "Balance of reciever: ", getterBalance / 10**18, "Remaining balance: ", senderBalance / 10**18)
-
     menu()
 
 mainmenu()
