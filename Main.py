@@ -229,7 +229,7 @@ def stakeanddel():
     CallTransactionBuilder,
     MessageTransactionBuilder
     )
-    nid = IconService(HTTPProvider("https://bicon.net.solidwallet.io/api/v3"))
+    nid = IconService(HTTPProvider(http))
     EXA = 10**18
 
 
